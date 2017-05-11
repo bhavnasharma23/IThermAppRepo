@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.itherm.ithermapp.agenda.AgendaActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <TextView
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AGENDA"/>
+        </android.support.v7.widget.Toolbar>
+
+        <com.nshmura.recyclertablayout.RecyclerTabLayout
+            android:id="@+id/recycler_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+
+            rtl_mTabBackground= "@android:color/black"
+            rtl_tabIndicatorColor="@android:color/white"
+            rtl_mTabBackgroundResId= "@drawable/back"
+            rtl_tabTextAppearance="@android:style/TextAppearance.Small"
+            rtl_tabSelectedTextColor="@android:color/black"
+            rtl_tabMinWidth="72dp"
+            rtl_tabMaxWidth="264dp"
+            rtl_tabPaddingStart="12dp"
+            rtl_tabPaddingTop="0dp"
+            rtl_tabPaddingEnd="12dp"
+            rtl_tabPaddingBottom="0dp"
+            rtl_tabPadding="0dp"/>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+
+
+    <include layout="@layout/content_main" />
+
+
+</android.support.design.widget.CoordinatorLayout>
